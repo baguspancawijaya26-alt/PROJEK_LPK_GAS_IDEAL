@@ -176,6 +176,7 @@ elif st.session_state.halaman == "hasil":
                     st.success(f"P baru = {P2:.4f} atm")
                     st.info("Kesimpulan: Jika T naik, maka P naik (berbanding lurus).")
 
-if st.button("Kembali ke Menu"):
+if st.session_state.halaman != "menu":
+    if st.button("Kembali ke Menu"):
         st.session_state.halaman = "menu"
         st.rerun()
