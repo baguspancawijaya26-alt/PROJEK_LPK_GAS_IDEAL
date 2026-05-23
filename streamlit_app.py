@@ -47,7 +47,10 @@ menu = st.selectbox(
     "Pilih Menu Perhitungan:",
     ["Hitung Tekanan (P)", "Hitung Volume (V)", "Hitung Mol (n)", "Hitung Suhu (T)", "Simulasi Perubahan (%)"]
 )
-
+if st.button("Lanjut"):
+        st.session_state.menu_pilih = pilihan
+        st.session_state.halaman = "perhitungan"
+        st.rerun()
 st.divider()
 
 # MENU HITUNG P 
