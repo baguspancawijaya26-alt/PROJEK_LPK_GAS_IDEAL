@@ -78,8 +78,8 @@ elif st.session_state.halaman == "input":
         T = st.number_input("Masukkan suhu (T) [K]", min_value=0.0001, step=1.0)
 
         if st.button("Hitung V"):
-        V = hitung_volume(P, n, T)
-        st.success(f"Volume (V) = {V:.4f} L")
+            V = hitung_volume(P, n, T)
+            st.success(f"Volume (V) = {V:.4f} L")
 
 # MENU HITUNG n 
     elif menu == "Hitung Mol (n)":
@@ -100,8 +100,8 @@ elif st.session_state.halaman == "input":
         n = st.number_input("Masukkan mol (n) [mol]", min_value=0.0001, step=0.1)
 
         if st.button("Hitung T"):
-        T = hitung_suhu(P, V, n)
-        st.success(f"Suhu (T) = {T:.4f} K")
+            T = hitung_suhu(P, V, n)
+            st.success(f"Suhu (T) = {T:.4f} K")
 
 # MENU SIMULASI
     elif menu == "Simulasi Perubahan (%)":
