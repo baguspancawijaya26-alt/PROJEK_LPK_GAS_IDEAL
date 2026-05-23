@@ -36,39 +36,30 @@ def hitung_mol(P, V, T):
 def hitung_suhu(P, V, n):
     return (P * V) / (n * R)
 
-
+if "halaman" not in st.session_state:
+    st.session_state.halaman = "menu"
+    
 # STREAMLIT UI
-st.title("⚗️KALKULATOR HUKUM GAS IDEAL⚗️")
-st.write("Persamaan Gas Ideal: **PV = nRT**")
-st.write("Satuan yang digunakan: atm, L, mol, K")
-st.write(f"Konstanta gas: **R = {R} L.atm/mol.K**")
+if st.session_state.halaman == "menu":
+    st.title("⚗️KALKULATOR HUKUM GAS IDEAL⚗️")
+    st.write("Persamaan Gas Ideal: **PV = nRT**")
+    st.write("Satuan yang digunakan: atm, L, mol, K")
+    st.write(f"Konstanta gas: **R = {R} L.atm/mol.K**")
 
-menu = st.selectbox(
-    "Pilih Menu Perhitungan:",
-    ["Hitung Tekanan (P)", "Hitung Volume (V)", "Hitung Mol (n)", "Hitung Suhu (T)", "Simulasi Perubahan (%)"]
-)
-if st.button("Lanjut"):
-        st.session_state.menu_pilih = pilihan
-        st.session_state.halaman = "perhitungan"
-        st.rerun()
-elif st.session_state.halaman == "perhitungan":
+    menu = st.selectbox(
+        "Pilih Menu Perhitungan:",
+        ["Hitung Tekanan (P)", "Hitung Volume (V)", "Hitung Mol (n)", "Hitung Suhu (T)", "Simulasi Perubahan (%)"]
+    )
 
-    pilihan = st.session_state.menu_pilih
-
-    st.title(pilihan)
-
-    if pilihan == "Hitung Tekanan":
-        st.write("Halaman Hitung Tekanan")
-
-    elif pilihan == "Hitung Volume":
-        st.write("Halaman Hitung Volume")
-
-    # tombol kembali
-    if st.button("Kembali ke Menu"):
-        st.session_state.halaman = "menu"
-        st.rerun()
-        
+    if st.button("Lanjut"):
+        st.session_state.menu = menu
+        st.session_state.halaman = "input"
+    
 st.divider()
+
+elif st.session_state.halaman == "input":
+
+    menu = st.session_state.menu
 
 # MENU HITUNG P 
 if menu == "Hitung Tekanan (P)":
@@ -162,3 +153,6 @@ elif menu == "Simulasi Perubahan (%)":
                 st.success(f"T baru = {T2:.4f} K")
                 st.success(f"P baru = {P2:.4f} atm")
                 st.info("Kesimpulan: Jika T naik, maka P naik (berbanding lurus).")
+
+if st.button("Kembali ke Menu"):
+        st.session_state.halaman = "menu"
