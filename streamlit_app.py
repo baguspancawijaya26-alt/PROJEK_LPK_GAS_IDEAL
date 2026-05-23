@@ -113,7 +113,11 @@ elif st.session_state.halaman == "input":
         n1 = st.number_input("Mol awal n1 [mol]", min_value=0.0001, step=0.1)
         T1 = st.number_input("Suhu awal T1 [K]", min_value=0.0001, step=1.0)
 
-        elif st.session_state.halaman == "hasil":
+        if st.button("Lanjut"):
+        st.session_state.variabel = variabel
+        st.session_state.halaman = "hasil"
+        
+    elif st.session_state.halaman == "hasil":
 
         variabel = st.selectbox("Pilih variabel yang diubah:", ["Tekanan (P)", "Volume (V)", "Mol (n)", "Suhu (T)"])
         persen = st.number_input("Masukkan persen perubahan (%) (boleh negatif untuk turun)", value=10.0, step=1.0)
