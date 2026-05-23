@@ -114,8 +114,8 @@ elif st.session_state.halaman == "input":
         T1 = st.number_input("Suhu awal T1 [K]", min_value=0.0001, step=1.0)
 
         if st.button("Lanjut"):
-        st.session_state.variabel = variabel
-        st.session_state.halaman = "hasil"
+            st.session_state.variabel = variabel
+            st.session_state.halaman = "hasil"
         
     elif st.session_state.halaman == "hasil":
 
