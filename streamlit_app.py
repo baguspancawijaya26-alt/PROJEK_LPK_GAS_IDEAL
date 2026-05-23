@@ -51,6 +51,23 @@ if st.button("Lanjut"):
         st.session_state.menu_pilih = pilihan
         st.session_state.halaman = "perhitungan"
         st.rerun()
+elif st.session_state.halaman == "perhitungan":
+
+    pilihan = st.session_state.menu_pilih
+
+    st.title(pilihan)
+
+    if pilihan == "Hitung Tekanan":
+        st.write("Halaman Hitung Tekanan")
+
+    elif pilihan == "Hitung Volume":
+        st.write("Halaman Hitung Volume")
+
+    # tombol kembali
+    if st.button("Kembali ke Menu"):
+        st.session_state.halaman = "menu"
+        st.rerun()
+        
 st.divider()
 
 # MENU HITUNG P 
