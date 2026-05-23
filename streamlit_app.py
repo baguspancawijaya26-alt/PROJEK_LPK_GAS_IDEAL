@@ -54,6 +54,7 @@ if st.session_state.halaman == "menu":
     if st.button("Lanjut"):
         st.session_state.menu = menu
         st.session_state.halaman = "input"
+        st.rerun()
 
 elif st.session_state.halaman == "input":
     st.title("⚗️KALKULATOR HUKUM GAS IDEAL⚗️")
@@ -123,6 +124,7 @@ elif st.session_state.halaman == "input":
                 st.session_state.n1 = n1
                 st.session_state.T1 = T1
                 st.session_state.halaman = "hasil"
+                st.rerun()
             else:
                 st.warning("Isi semua data sebelum lanjut!")
         
@@ -176,3 +178,4 @@ elif st.session_state.halaman == "hasil":
 
 if st.button("Kembali ke Menu"):
         st.session_state.halaman = "menu"
+        st.rerun()
