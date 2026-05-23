@@ -56,7 +56,10 @@ if st.session_state.halaman == "menu":
         st.session_state.halaman = "input"
 
 elif st.session_state.halaman == "input":
-
+    st.title("⚗️KALKULATOR HUKUM GAS IDEAL⚗️")
+    st.write("Persamaan Gas Ideal: **PV = nRT**")
+    st.write("Satuan yang digunakan: atm, L, mol, K")
+    st.write(f"Konstanta gas: **R = {R} L.atm/mol.K**")
     menu = st.session_state.menu
 
 # MENU HITUNG P 
@@ -124,7 +127,11 @@ elif st.session_state.halaman == "input":
                 st.warning("Isi semua data sebelum lanjut!")
         
 elif st.session_state.halaman == "hasil":
-    
+        st.title("⚗️KALKULATOR HUKUM GAS IDEAL⚗️")
+        st.write("Persamaan Gas Ideal: **PV = nRT**")
+        st.write("Satuan yang digunakan: atm, L, mol, K")
+        st.write(f"Konstanta gas: **R = {R} L.atm/mol.K**")
+        
         P1 = st.session_state.P1
         V1 = st.session_state.V1
         n1 = st.session_state.n1
