@@ -47,7 +47,7 @@ menu = st.selectbox(
     "Pilih Menu Perhitungan:",
     ["Hitung Tekanan (P)", "Hitung Volume (V)", "Hitung Mol (n)", "Hitung Suhu (T)", "Simulasi Perubahan (%)"]
 )
-
+st.rerun
 st.divider()
 
 # MENU HITUNG P 
