@@ -23,7 +23,7 @@ st.markdown(
 
 R = 0.0821  # L.atm/mol.K
 
-# ---------- FUNGSI PERHITUNGAN ----------
+# FUNGSI PERHITUNGAN
 def hitung_tekanan(n, V, T):
     return (n * R * T) / V
 
@@ -37,7 +37,7 @@ def hitung_suhu(P, V, n):
     return (P * V) / (n * R)
 
 
-# ---------- STREAMLIT UI ----------
+# STREAMLIT UI
 st.title("⚗️KALKULATOR HUKUM GAS IDEAL⚗️")
 st.write("Persamaan Gas Ideal: **PV = nRT**")
 st.write("Satuan yang digunakan: atm, L, mol, K")
@@ -47,10 +47,10 @@ menu = st.selectbox(
     "Pilih Menu Perhitungan:",
     ["Hitung Tekanan (P)", "Hitung Volume (V)", "Hitung Mol (n)", "Hitung Suhu (T)", "Simulasi Perubahan (%)"]
 )
-
+st.rerun()
 st.divider()
 
-# ---------- MENU HITUNG P ----------
+# MENU HITUNG P 
 if menu == "Hitung Tekanan (P)":
     st.subheader("Hitung Tekanan (P)")
     n = st.number_input("Masukkan mol (n) [mol]", min_value=0.0001, step=0.1)
@@ -61,7 +61,7 @@ if menu == "Hitung Tekanan (P)":
         P = hitung_tekanan(n, V, T)
         st.success(f"Tekanan (P) = {P:.4f} atm")
 
-# ---------- MENU HITUNG V ----------
+# MENU HITUNG V
 elif menu == "Hitung Volume (V)":
     st.subheader("Hitung Volume (V)")
     P = st.number_input("Masukkan tekanan (P) [atm]", min_value=0.0001, step=0.1)
@@ -72,7 +72,7 @@ elif menu == "Hitung Volume (V)":
         V = hitung_volume(P, n, T)
         st.success(f"Volume (V) = {V:.4f} L")
 
-# ---------- MENU HITUNG n ----------
+# MENU HITUNG n 
 elif menu == "Hitung Mol (n)":
     st.subheader("Hitung Mol (n)")
     P = st.number_input("Masukkan tekanan (P) [atm]", min_value=0.0001, step=0.1)
@@ -83,7 +83,7 @@ elif menu == "Hitung Mol (n)":
         n = hitung_mol(P, V, T)
         st.success(f"Jumlah mol (n) = {n:.4f} mol")
 
-# ---------- MENU HITUNG T ----------
+# MENU HITUNG T
 elif menu == "Hitung Suhu (T)":
     st.subheader("Hitung Suhu (T)")
     P = st.number_input("Masukkan tekanan (P) [atm]", min_value=0.0001, step=0.1)
@@ -94,7 +94,7 @@ elif menu == "Hitung Suhu (T)":
         T = hitung_suhu(P, V, n)
         st.success(f"Suhu (T) = {T:.4f} K")
 
-# ---------- MENU SIMULASI ----------
+# MENU SIMULASI
 elif menu == "Simulasi Perubahan (%)":
     st.subheader("Simulasi Perubahan Variabel (%)")
     st.write("Masukkan kondisi awal gas:")
