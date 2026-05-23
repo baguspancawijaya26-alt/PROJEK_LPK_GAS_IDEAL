@@ -108,10 +108,10 @@ elif st.session_state.halaman == "input":
         st.subheader("Simulasi Perubahan Variabel (%)")
         st.write("Masukkan kondisi awal gas:")
 
-        P1 = st.number_input("Tekanan awal P1 [atm]", min_value=0.0001, step=0.1)
-        V1 = st.number_input("Volume awal V1 [L]", min_value=0.0001, step=0.1)
-        n1 = st.number_input("Mol awal n1 [mol]", min_value=0.0001, step=0.1)
-        T1 = st.number_input("Suhu awal T1 [K]", min_value=0.0001, step=1.0)
+        P1 = st.number_input("Tekanan awal P1 [atm]", min_value=0.0, step=0.1)
+        V1 = st.number_input("Volume awal V1 [L]", min_value=0.0, step=0.1)
+        n1 = st.number_input("Mol awal n1 [mol]", min_value=0.0, step=0.1)
+        T1 = st.number_input("Suhu awal T1 [K]", min_value=0.0, step=1.0)
 
         if st.button("Lanjut"):
             if P1 > 0 and V1 > 0 and n1 > 0 and T1 > 0:
