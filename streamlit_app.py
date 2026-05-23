@@ -54,8 +54,6 @@ if st.session_state.halaman == "menu":
     if st.button("Lanjut"):
         st.session_state.menu = menu
         st.session_state.halaman = "input"
-    
-st.divider()
 
 elif st.session_state.halaman == "input":
 
