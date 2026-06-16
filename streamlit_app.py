@@ -192,10 +192,10 @@ st.markdown("""
 ">
     ⚗️ <b>Kalkulator Hukum Gas Ideal</b> ⚗️<br>
     Developed by <b>Kelompok 8</b> © 2026<br>
-    Amelia Dwi Putri                   (2560569)
-    Anggi Lanika Zafera                (2560573)
-    Bagus Panca Wijaya                 (2560596)
-    Cheisa Siti Almarsya Mulyathanya   (2560600)
+    Amelia Dwi Putri                   (2560569)<br>
+    Anggi Lanika Zafera                (2560573)<br>
+    Bagus Panca Wijaya                 (2560596)<br>
+    Cheisa Siti Almarsya Mulyathanya   (2560600)<br>
     Hanna Duma Gloria Mangunsong       (2560639)
 </div>
 """, unsafe_allow_html=True)
