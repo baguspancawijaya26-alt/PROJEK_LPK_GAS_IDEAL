@@ -190,7 +190,12 @@ st.markdown("""
     color:#666;
     font-size:14px;
 ">
-    ⚗️ <b>Kalkulator Hukum Gas Ideal</b>⚗️<br>
+    ⚗️ <b>Kalkulator Hukum Gas Ideal</b> ⚗️<br>
     Developed by <b>Kelompok 8</b> © 2026
+    Amelia Dwi Putri                   (2560569)
+    Anggi Lanika Zafera                (2560573)
+    Bagus Panca Wijaya                 (2560596)
+    Cheisa Siti Almarsya Mulyathanya   (2560600)
+    Hanna Duma Gloria Mangunsong       (2560639)
 </div>
 """, unsafe_allow_html=True)
