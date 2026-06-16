@@ -180,3 +180,17 @@ if st.session_state.halaman != "menu":
     if st.button("Kembali ke Menu"):
         st.session_state.halaman = "menu"
         st.rerun()
+
+st.markdown("""
+<div style="
+    text-align:center;
+    margin-top:30px;
+    padding:10px;
+    border-top:1px solid #ccc;
+    color:#666;
+    font-size:14px;
+">
+    ⚗️ <b>Kalkulator Hukum Gas Ideal</b><br>
+    Developed by <b>Bagus Panca Wijaya</b> © 2026
+</div>
+""", unsafe_allow_html=True)
