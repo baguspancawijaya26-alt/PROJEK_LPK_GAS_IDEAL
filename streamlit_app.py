@@ -190,7 +190,7 @@ st.markdown("""
     color:#666;
     font-size:14px;
 ">
-    ⚗️ <b>Kalkulator Hukum Gas Ideal</b><br>
+    ⚗️ <b>Kalkulator Hukum Gas Ideal</b><br>⚗️
     Developed by <b>Kelompok 8</b> © 2026
 </div>
 """, unsafe_allow_html=True)
