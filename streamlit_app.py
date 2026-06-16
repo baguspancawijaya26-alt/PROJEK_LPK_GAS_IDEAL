@@ -191,6 +191,6 @@ st.markdown("""
     font-size:14px;
 ">
     ⚗️ <b>Kalkulator Hukum Gas Ideal</b><br>
-    Developed by <b>Bagus Panca Wijaya</b> © 2026
+    Developed by <b>Kelompok 8</b> © 2026
 </div>
 """, unsafe_allow_html=True)
